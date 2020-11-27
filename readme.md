@@ -34,10 +34,10 @@ const yuri-canvas = require("yuri-canvas");
 
 async function create() {
     let img = await canvacord.trigger("./image.png");
-    canvacord.write(img, "triggered.gif");
+    yuricanvas.write(img, "triggered.gif");
 
     let color = await yuri-canvas.color("#4E5D94");
-    yuri-canvas.write(color, "color.png");
+    yuricanvas.write(color, "color.png");
 }
 
 create();
@@ -59,19 +59,19 @@ client.on("message", async (message) => {
     if (message.author.bot) return;
     if (message.content === "!trigger") {
         let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-        let image = await yuri-canvas.trigger(avatar);
+        let image = await yuricanvas.trigger(avatar);
         let attachment = new Discord.MessageAttachment(image, "triggered.gif");
         return message.channel.send(attachment);
     }
     if (message.content === "!delete") {
         let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-        let image = await canvacord.delete(avatar);
+        let image = await yuricanvas.delete(avatar);
         let attachment = new Discord.MessageAttachment(image, "deleted.png");
         return message.channel.send(attachment);
     }
     if (message.content === "!rank") {
         let rank = getRankSomehow();
-        let image = await yuri-canvas.rank({ 
+        let image = await yuricanvas.rank({ 
             username, 
             discrim, 
             level: rank.level, 
