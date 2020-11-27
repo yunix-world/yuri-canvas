@@ -95,37 +95,37 @@ client.login("Your_Bot_Token_here");
 **[https://canvacord.snowflakedev.xyz](https://canvacord.snowflakedev.xyz)**
 
 # Preview
-![image](https://raw.githubusercontent.com/Snowflake107/canvacord/master/screenshot.png)
+![image](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/screenshot.png)
 
 # Change My Mind
-![img](https://raw.githubusercontent.com/Snowflake107/canvacord/master/test/changemymind.png)
+![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/changemymind.png)
 
 # Rank Cards
 ## Default
-![img](https://raw.githubusercontent.com/Snowflake107/canvacord/master/test/rank-default.png)
+![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/rank-default.png)
 
 ## Custom Background & Color
-![img](https://raw.githubusercontent.com/Snowflake107/canvacord/master/test/rank-custom-bg-and-color.png)
+![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/rank-custom-bg-and-color.png)
 
 ## Custom Background & No Overlay
-![img](https://raw.githubusercontent.com/Snowflake107/canvacord/master/test/rank-custom-bg-no-overlay.png)
+![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/rank-custom-bg-no-overlay.png)
 
 ## Custom Background
-![img](https://raw.githubusercontent.com/Snowflake107/canvacord/master/test/rank-custom-bg.png)
+![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/rank-custom-bg.png)
 
 ## Custom Background, Color & No Overlay
 ![img](https://raw.githubusercontent.com/Snowflake107/canvacord/master/test/rank-custom-color-bg-no-overlay.png)
 
 ## Custom Color
-![img](https://raw.githubusercontent.com/Snowflake107/canvacord/master/test/rank-custom-color.png)
+![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/rank-custom-color.png)
 
 # Triggered
-![img](https://raw.githubusercontent.com/Snowflake107/canvacord/master/test/triggered.gif)
+![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/triggered.gif)
 
 # Color
-![img](https://raw.githubusercontent.com/Snowflake107/canvacord/master/test/color.png)
+![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/color.png)
 
 > ### Read the docs for more endpoints
 
 # Join Our Discord Server
-**[discord.gg/uqB8kxh](https://discord.gg/uqB8kxh)**
+**[discord.gg/uqB8kxh](https://discord.gg/crnmuSD)**
