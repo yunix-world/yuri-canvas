@@ -24,7 +24,7 @@ npm i --save yuri-canvas
 - If you want to go deeper, you must learn canvas
 
 # Methods
-**[All The Methods are listed here](https://canvacord.snowflakedev.xyz/canvacord)**
+**[All The Methods are listed here](https://canvacord.snowflakedev.xyz/)**
 
 # Example
 
