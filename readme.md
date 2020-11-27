@@ -114,7 +114,7 @@ client.login("Your_Bot_Token_here");
 ![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/rank-custom-bg.png)
 
 ## Custom Background, Color & No Overlay
-![img](https://raw.githubusercontent.com/Snowflake107/canvacord/master/test/rank-custom-color-bg-no-overlay.png)
+![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/rank-custom-color-bg-no-overlay.png)
 
 ## Custom Color
 ![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/rank-custom-color.png)
