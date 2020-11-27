@@ -128,4 +128,4 @@ client.login("Your_Bot_Token_here");
 > ### Read the docs for more endpoints
 
 # Join Our Discord Server
-**[discord.gg/uqB8kxh](https://discord.gg/crnmuSD)**
+**[discord.gg/crnmuSD](https://discord.gg/crnmuSD)**
