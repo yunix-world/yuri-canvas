@@ -1,4 +1,4 @@
-# Canvacord
+# Yuri-Canvas
 Canvacord is a wrapper for canvas & jimp which can be used to create/manipulate images easily. 
 This package is meant for beginners who don't know how to use canvas & stuffs.
 
