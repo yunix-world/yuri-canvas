@@ -1,0 +1,51 @@
+{
+  "name": "canvacord",
+  "version": "4.0.0",
+  "description": "Simple & easy to use image manipulation module for discord bots with a lot of features like rank card, memes & more.",
+  "main": "index.js",
+  "scripts": {
+    "docsgen": "jsdoc --configure .jsdoc.json --verbose",
+    "test": "cd test && node index.js",
+    "format": "prettier --write \"src/**/*.js\""
+  },
+  "homepage": "https://canvacord.snowflakedev.xyz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Snowflake107/Canvacord"
+  },
+  "keywords": [
+    "Canvacord",
+    "discord-canvas",
+    "discord.js-canvas",
+    "discord.js-image",
+    "memes",
+    "rank",
+    "rank-card",
+    "welcomer",
+    "leaver",
+    "dank-memer",
+    "imagen",
+    "imgen",
+    "imagegen",
+    "canvas",
+    "jimp",
+    "api"
+  ],
+  "author": "Snowflake107",
+  "license": "ISC",
+  "dependencies": {
+    "@jimp/custom": "^0.14.0",
+    "@jimp/plugin-circle": "^0.14.0",
+    "canvas": "^2.6.1",
+    "gifencoder": "^2.0.1",
+    "jimp": "^0.14.0",
+    "moment": "^2.27.0",
+    "moment-duration-format": "^2.3.2",
+    "node-canvas-with-twemoji-and-discord-emoji": "^1.1.4"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.5",
+    "jsdoc-skyceil": "^1.0.5",
+    "prettier": "^2.0.5"
+  }
+}
