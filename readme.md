@@ -7,7 +7,7 @@ This package is meant for beginners who don't know how to use canvas & stuffs.
 # Installing
 
 ```bash
-npm i --save canvacord
+npm i --save yuri-canvas
 ```
 
 # Features
@@ -30,7 +30,7 @@ npm i --save canvacord
 
 ```js
 
-const canvacord = require("canvacord");
+const yuri-canvas = require("yuri-canvas");
 
 async function create() {
     let img = await canvacord.trigger("./image.png");
@@ -49,7 +49,7 @@ create();
 ```js
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const canvacord = require("canvacord");
+const canvacord = require("yuri-canvas");
 
 client.on("ready", () => {
     console.log("I'm online!");
@@ -95,7 +95,7 @@ client.login("Your_Bot_Token_here");
 **[https://canvacord.snowflakedev.xyz](https://canvacord.snowflakedev.xyz)**
 
 # Preview
-![image](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/screenshot.png)
+![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/screenshot.png)
 
 # Change My Mind
 ![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/changemymind.png)
