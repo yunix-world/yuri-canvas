@@ -36,8 +36,8 @@ async function create() {
     let img = await canvacord.trigger("./image.png");
     canvacord.write(img, "triggered.gif");
 
-    let color = await canvacord.color("#4E5D94");
-    canvacord.write(color, "color.png");
+    let color = await yuri-canvas.color("#4E5D94");
+    yuri-canvas.write(color, "color.png");
 }
 
 create();
@@ -59,7 +59,7 @@ client.on("message", async (message) => {
     if (message.author.bot) return;
     if (message.content === "!trigger") {
         let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-        let image = await canvacord.trigger(avatar);
+        let image = await yuri-canvas.trigger(avatar);
         let attachment = new Discord.MessageAttachment(image, "triggered.gif");
         return message.channel.send(attachment);
     }
@@ -71,7 +71,7 @@ client.on("message", async (message) => {
     }
     if (message.content === "!rank") {
         let rank = getRankSomehow();
-        let image = await canvacord.rank({ 
+        let image = await yuri-canvas.rank({ 
             username, 
             discrim, 
             level: rank.level, 
