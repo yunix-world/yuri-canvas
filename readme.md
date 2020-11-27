@@ -30,7 +30,7 @@ npm i --save yuri-canvas
 
 ```js
 
-const yuri-canvas = require("yuri-canvas");
+const yuricanvas = require("yuri-canvas");
 
 async function create() {
     let img = await canvacord.trigger("./image.png");
