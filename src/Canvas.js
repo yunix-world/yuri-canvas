@@ -535,7 +535,6 @@ class Canvacord {
     ) {
         if (!options.username) throw new Error("No username was provided!");
         if (!options.level) throw new Error("No level was provided!");
-        if (!options.rank) throw new Error("No rank was provided!");
         if (!options.neededXP) throw new Error("No totalXP was provided!");
         if (!options.currentXP) throw new Error("No currentXP was provided!");
         if (!options.avatarURL) throw new Error("No avatarURL was provided!");
@@ -612,6 +611,7 @@ class Canvacord {
         ctx.fillStyle = color || "#FFFFFF";
         ctx.fillText("LEVEL", 934 - 64 - ctx.measureText(level).width - 16, 82);
 
+       if(rank) {
         ctx.font = `bold 36px ${font}`;
         ctx.fillStyle = color || "#FFFFFF";
         ctx.textAlign = "end";
@@ -629,6 +629,7 @@ class Canvacord {
                 16,
             82
         );
+      };
 
         ctx.font = `bold 36px ${font}`;
         ctx.fillStyle = color || "#FFFFFF";
