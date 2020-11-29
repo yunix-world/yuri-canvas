@@ -1,6 +1,6 @@
 {
-  "name": "canvacord",
-  "version": "4.0.0",
+  "name": "yuri-canvas",
+  "version": "4.0.1",
   "description": "Simple & easy to use image manipulation module for discord bots with a lot of features like rank card, memes & more.",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
     "jimp",
     "api"
   ],
-  "author": "Snowflake107",
+  "author": "Yuri-Project",
   "license": "ISC",
   "dependencies": {
     "@jimp/custom": "^0.14.0",

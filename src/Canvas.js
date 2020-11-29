@@ -16,11 +16,11 @@ const statuses = {
 configure({ plugins: [circle] }, jimp);
 
 /**
- * Canvacord
+ * YuriCanvas
  * Simple and easy to use image manipulation module
  * created and maintained by Snowflake107.
  */
-class Canvacord {
+class YuriCanvas {
     constructor() {
         throw new Error(`The class ${this.constructor.name} may not be instantiated!`);
     }
@@ -274,7 +274,7 @@ class Canvacord {
     static async color(color = "RANDOM") {
         const canvas = Canvas.createCanvas(2048, 2048);
         const ctx = canvas.getContext("2d");
-        ctx.fillStyle = Canvacord._getHex(color);
+        ctx.fillStyle = YuriCanvas._getHex(color);
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         return canvas.toBuffer();
     }
@@ -478,7 +478,7 @@ class Canvacord {
      * canva.write(img, "img.png");
      */
     static async wasted(Image) {
-        let converted = await Canvacord.greyscale(Image);
+        let converted = await YuriCanvas.greyscale(Image);
         const canvas = Canvas.createCanvas(500, 500);
         const ctx = canvas.getContext("2d");
         const base = await Canvas.loadImage(__dirname + "/assets/images/wasted.png");
@@ -507,7 +507,7 @@ class Canvacord {
      * @param {String} rank User rank
      * @param {String} neededXP XP needed to reach next level
      * @param {String} currentXP Current XP of a user
-     * @param {Buffer|String} avatarURL Avatar URL or {Buffer} or Canvacord {Buffer} itself
+     * @param {Buffer|String} avatarURL Avatar URL or {Buffer} or YuriCanvas {Buffer} itself
      * @param {String} color Hex or HTML5 color name or rgb
      * @param {String|Buffer} background Rank card background image
      * @param {Boolean} overlay Keep overlay or not
@@ -586,10 +586,10 @@ class Canvacord {
         } else rankCard = await Canvas.loadImage(__dirname + "/assets/images/rankcard.png");
         ctx.drawImage(rankCard, 0, 0, canvas.width, canvas.height);
 
-        const avatar = await Canvas.loadImage(await Canvacord.circle(avatarURL));
+        const avatar = await Canvas.loadImage(await YuriCanvas.circle(avatarURL));
         ctx.drawImage(avatar, 70, 50, 180, 180);
 
-        let i = await Canvas.loadImage(await Canvacord.circle(statuses[status.toLowerCase() || "online"]));
+        let i = await Canvas.loadImage(await YuriCanvas.circle(statuses[status.toLowerCase() || "online"]));
         ctx.drawImage(i, 200, 185, 40, 40);
 
         const font = "Manrope";
@@ -673,7 +673,7 @@ class Canvacord {
      * welcome
      * @param {String} username Username
      * @param {String} discrim Discriminator
-     * @param {String} avatarURL Avatar URL or {Buffer} or Canvacord {Buffer} itself
+     * @param {String} avatarURL Avatar URL or {Buffer} or YuriCanvas {Buffer} itself
      * @param {String} color Hex or HTML5 color name or rgb
      * @returns {Promise<Buffer>}
      * @example let img = await canva.welcome({ username: "Snowflake", discrim: "0007", avatarURL: "..." });
@@ -748,21 +748,21 @@ class Canvacord {
      * welcome
      * @param {String} username Username
      * @param {String} discrim Discriminator
-     * @param {String} avatarURL Avatar URL or {Buffer} or Canvacord {Buffer} itself
+     * @param {String} avatarURL Avatar URL or {Buffer} or YuriCanvas {Buffer} itself
      * @param {String} color Hex or HTML5 color name or rgb
      * @returns {Promise<Buffer>}
      * @example let img = await canva.welcomer({ username: "Snowflake", discrim: "0007", avatarURL: "..." });
      * canva.write(img, "img.png");
      */
     static async welcomer(...options) {
-        return Canvacord.welcome(...options);
+        return YuriCanvas.welcome(...options);
     }
 
     /**
      * leaver
      * @param {String} username Username
      * @param {String} discrim Discriminator
-     * @param {String} avatarURL Avatar URL or {Buffer} or Canvacord {Buffer} itself
+     * @param {String} avatarURL Avatar URL or {Buffer} or YuriCanvas {Buffer} itself
      * @param {String} color Hex or HTML5 color name or rgb
      * @returns {Promise<Buffer>}
      * @example let img = await canva.leaver({ username: "Snowflake", discrim: "0007", avatarURL: "..." });
@@ -837,14 +837,14 @@ class Canvacord {
      * leaver
      * @param {String} username Username
      * @param {String} discrim Discriminator
-     * @param {String} avatarURL Avatar URL or {Buffer} or Canvacord {Buffer} itself
+     * @param {String} avatarURL Avatar URL or {Buffer} or YuriCanvas {Buffer} itself
      * @param {String} color Hex or HTML5 color name or rgb
      * @returns {Promise<Buffer>}
      * @example let img = await canva.leave({ username: "Snowflake", discrim: "0007", avatarURL: "..." });
      * canva.write(img, "img.png");
      */
     static async leave(...options) {
-        return Canvacord.leaver(...options);
+        return YuriCanvas.leaver(...options);
     }
 
     /**
@@ -889,7 +889,7 @@ class Canvacord {
         let ctx = canvas.getContext("2d");
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, 425, 404);
-        image = await Canvas.loadImage(await Canvacord.circle(image));
+        image = await Canvas.loadImage(await YuriCanvas.circle(image));
         ctx.drawImage(image, 125, 130, 140, 135);
         let layer = await Canvas.loadImage(__dirname + "/assets/images/jokeoverhead.png");
         ctx.drawImage(layer, 0, 0, 425, 404);
@@ -1048,7 +1048,7 @@ class Canvacord {
 
         let base = await jimp.read(__dirname + "/assets/images/youtube.png");
         base.resize(650, 183);
-        let avatar = await await jimp.read(await Canvacord.circle(image));
+        let avatar = await await jimp.read(await YuriCanvas.circle(image));
         avatar.resize(52, 52);
 
         base.composite(avatar, 17, 33);
@@ -1088,24 +1088,24 @@ class Canvacord {
      * @param {String|Buffer} image2 Face for the boy
      * @param {String|Buffer} image3 Face for the other girl [optional]
      * @returns {Promise<Buffer>}
-     * @example let img = await canvacord.distracted("firstImage.png", "secondImage.png", "thirdImage.png")
-     * canvacord.write(img, "distracted.png");
+     * @example let img = await YuriCanvas.distracted("firstImage.png", "secondImage.png", "thirdImage.png")
+     * YuriCanvas.write(img, "distracted.png");
      */
     static async distracted(image1, image2, image3 = null) {
         if (!image1) throw new Error("No image1 provided!");
         if (!image2) throw new Error("No image2 provided!");
         let base = await jimp.read(__dirname + "/assets/images/distracted.jpg");
 
-        image1 = await jimp.read(await Canvacord.circle(image1));
+        image1 = await jimp.read(await YuriCanvas.circle(image1));
         image1.resize(150, 150);
 
-        image2 = await jimp.read(await Canvacord.circle(image2));
+        image2 = await jimp.read(await YuriCanvas.circle(image2));
         image2.resize(130, 130);
 
         base.composite(image1, 180, 90);
         base.composite(image2, 480, 35);
         if (image3 && image3 !== null) {
-            image3 = await jimp.read(await Canvacord.circle(image3));
+            image3 = await jimp.read(await YuriCanvas.circle(image3));
             image3.resize(130, 130);
             base.composite(image3, 730, 110);
         }
@@ -1117,13 +1117,13 @@ class Canvacord {
      * Clyde
      * @param {String} message Message
      * @returns {Promise<Buffer>}
-     * @example const image = await canvacord.clyde("You can't do that");
+     * @example const image = await YuriCanvas.clyde("You can't do that");
      * canva.write(image, "clyde.png");
      */
     static async clyde(message) {
         if (!message) messgae = "Please provide text!";
         let avatar = await Canvas.loadImage(
-            await Canvacord.circle(
+            await YuriCanvas.circle(
                 "https://images.discordapp.net/avatars/536953835361665024/ea7664a628a7a4b772dd06ed81637334.png?size=512"
             )
         );
@@ -1185,7 +1185,7 @@ class Canvacord {
      * @param {String} [options.username] Username
      * @param {String} [options.color] Color
      * @returns {Promise<Buffer>}
-     * @example const image = await canvacord.quote({ image: "...", message: "You can't do that", username: "Canvacord", color: "pink" });
+     * @example const image = await YuriCanvas.quote({ image: "...", message: "You can't do that", username: "YuriCanvas", color: "pink" });
      * canva.write(image, "quote.png");
      */
     static async quote(options = { image, message, username, color }) {
@@ -1196,7 +1196,7 @@ class Canvacord {
         if (!options.username) options.username = "Clyde";
         if (!options.color) options.color = "#FFFFFF";
 
-        options.image = await Canvas.loadImage(await Canvacord.circle(options.image));
+        options.image = await Canvas.loadImage(await YuriCanvas.circle(options.image));
 
         Canvas.registerFont(__dirname + "/assets/fonts/Whitney-medium.otf", {
             family: "Whitney",
@@ -1243,7 +1243,7 @@ class Canvacord {
      * @param {String} [options.message] Comment
      * @param {String|Buffer} [options.image] Image
      * @returns {Promise<Buffer>}
-     * @example const image = await canvacord.phub({ username: "User", message: "Looks good 👏🏻", image: "..." });
+     * @example const image = await YuriCanvas.phub({ username: "User", message: "Looks good 👏🏻", image: "..." });
      */
     static async phub(options = { username, message, image }) {
         if (!options.username) throw new Error("Username may not be empty!");
@@ -1273,7 +1273,7 @@ class Canvacord {
     }
 
     /**
-     * Canvacord Version
+     * YuriCanvas Version
      */
     static get version() {
         return require("../package.json").version;
@@ -1289,7 +1289,7 @@ class Canvacord {
      * @param {number} [options.start] Timestamp when song started
      * @param {number} [options.end] Timestamp when song ends
      * @returns {Promise<Buffer>}
-     * @example const img = await canvacord.spotify({
+     * @example const img = await YuriCanvas.spotify({
      *     title: "Faded",
      *     artist: "Alan Walker",
      *     album: "Different World",
@@ -1298,7 +1298,7 @@ class Canvacord {
      *     end: END_TIMESTAMP
      * });
      *
-     * canvacord.write(img, "spotify.png");
+     * YuriCanvas.write(img, "spotify.png");
      */
     static async spotify(options = { title: null, image: null, artist: null, album: null, start: null, end: null }) {
         if (!options) throw new Error('Missing parameter "options".');
@@ -1389,8 +1389,8 @@ class Canvacord {
      * Attachment object for discord.js
      * @param {string|Buffer} data Data
      * @param {string} name name
-     * @example const data = await canvacord.color("blue");
-     * const img = canvacord.Attachment(data, "color.png");
+     * @example const data = await YuriCanvas.color("blue");
+     * const img = YuriCanvas.Attachment(data, "color.png");
      * return message.channel.send(img);
      */
     static Attachment(data, name, raw = false) {
@@ -1406,8 +1406,8 @@ class Canvacord {
      * Rotates image
      * @param {string|Buffer} image Image to rotate
      * @param {number} angle Rotation angle
-     * @example const img = await canvacord.rotate(image, 90);
-     * canvacord.write(img, "image.png");
+     * @example const img = await YuriCanvas.rotate(image, 90);
+     * YuriCanvas.write(img, "image.png");
      * @returns {Promise<Buffer>}
      */
     static async rotate(image, angle = 0) {
@@ -1418,4 +1418,4 @@ class Canvacord {
     }
 }
 
-module.exports = Canvacord;
+module.exports = YuriCanvas;
