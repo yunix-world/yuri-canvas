@@ -1,5 +1,5 @@
 # Yuri-Canvas
-Canvacord is a wrapper for canvas & jimp which can be used to create/manipulate images easily. 
+yuricanvas is a wrapper for canvas & jimp which can be used to create/manipulate images easily. 
 This package is meant for beginners who don't know how to use canvas & stuffs.
 
 > ⚠ This package is not recommended to you if you know how to use canvas/other image manipulation tools.
@@ -24,7 +24,7 @@ npm i --save yuri-canvas
 - If you want to go deeper, you must learn canvas
 
 # Methods
-**[All The Methods are listed here](https://canvacord.snowflakedev.xyz/)**
+**[All The Methods are listed here](https://yuricanvas.snowflakedev.xyz/)**
 
 # Example
 
@@ -33,10 +33,10 @@ npm i --save yuri-canvas
 const yuricanvas = require("yuri-canvas");
 
 async function create() {
-    let img = await canvacord.trigger("./image.png");
+    let img = await yuricanvas.trigger("./image.png");
     yuricanvas.write(img, "triggered.gif");
 
-    let color = await yuri-canvas.color("#4E5D94");
+    let color = await yuricanvas.color("#4E5D94");
     yuricanvas.write(color, "color.png");
 }
 
@@ -49,7 +49,7 @@ create();
 ```js
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const canvacord = require("yuri-canvas");
+const yuricanvas = require("yuri-canvas");
 
 client.on("ready", () => {
     console.log("I'm online!");
