@@ -36,7 +36,8 @@
   "dependencies": {
     "@jimp/custom": "^x",
     "@jimp/plugin-circle": "^x",
-    "@jimp/plugin-threshold": "^x",
+    "@jimp/plugin-resize": "^x",
+    "@jimp/plugin-color": "^x",
     "canvas": "^2.6.1",
     "gifencoder": "^2.0.1",
     "jimp": "^x",
