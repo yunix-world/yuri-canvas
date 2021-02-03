@@ -470,6 +470,24 @@ class YuriCanvas {
         return raw;
     }
 
+/**
+     * Resize an image
+     * @param {string|Buffer} image Image source
+     * @param {number} width width
+     * @param {number} height height
+     * @returns {Promise<Buffer>}
+     */
+    static async resize(image, width, height) {
+        if (!image) throw new Error("Image was not provided!");
+        const img = await Canvas.loadImage(image);
+        const w = width && !isNaN(width) ? width : img.width;
+        const h = height && !isNaN(height) ? width : img.height;
+        const canvas = await Canvas.createCanvas(w, h);
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        return canvas.toBuffer();
+    }
+
     /**
      * wasted
      * @param {Buffer} Image Image to manipulate

@@ -1,6 +1,6 @@
 {
   "name": "yuri-canvas",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Simple & easy to use image manipulation module for discord bots with a lot of features like rank card, memes & more.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "url": "https://github.com/yuri-project-ml/yuri-canvas"
   },
   "keywords": [
-    "Canvacord",
+    "YuriCanvas",
     "discord-canvas",
     "discord.js-canvas",
     "discord.js-image",
