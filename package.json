@@ -34,11 +34,12 @@
   "author": "Yuri-Project",
   "license": "ISC",
   "dependencies": {
-    "@jimp/custom": "^0.14.0",
-    "@jimp/plugin-circle": "^0.14.0",
+    "@jimp/custom": "^x",
+    "@jimp/plugin-circle": "^x",
+    "@jimp/plugin-threshold": "^x",
     "canvas": "^2.6.1",
     "gifencoder": "^2.0.1",
-    "jimp": "^0.14.0",
+    "jimp": "^x",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "node-canvas-with-twemoji-and-discord-emoji": "^1.1.4"
