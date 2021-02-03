@@ -477,7 +477,7 @@ class YuriCanvas {
      * @param {number} height height
      * @returns {Promise<Buffer>}
      */
-    static async resize(image, width, height) {
+    static async resizes(image, width, height) {
         if (!image) throw new Error("Image was not provided!");
         const img = await Canvas.loadImage(image);
         const w = width && !isNaN(width) ? width : img.width;
