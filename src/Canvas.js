@@ -470,7 +470,7 @@ class YuriCanvas {
         return raw;
     }
 
-/**
+    /**
      * Resize an image
      * @param {string|Buffer} image Image source
      * @param {number} width width
