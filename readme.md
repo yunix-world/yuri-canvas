@@ -44,30 +44,30 @@ create();
 
 ```
 
-# Discord.js Example
+# Discord.js v13 Example
 
 ```js
-const Discord = require("discord.js");
-const client = new Discord.Client();
+const { Client, Intents, MessageAttachment } = require("discord.js");
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILDS_MESSAGES] });
 const yuricanvas = require("yuri-canvas");
 
 client.on("ready", () => {
     console.log("I'm online!");
 });
 
-client.on("message", async (message) => {
+client.on("messageCreate", async (message) => {
     if (message.author.bot) return;
     if (message.content === "!trigger") {
-        let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+        let avatar = message.author.displayAvatarURL({ format: 'png' });
         let image = await yuricanvas.trigger(avatar);
-        let attachment = new Discord.MessageAttachment(image, "triggered.gif");
-        return message.channel.send(attachment);
+        let attachment = new MessageAttachment(image, "triggered.gif");
+        return message.channel.send({ files: [attachment] });
     }
     if (message.content === "!delete") {
-        let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+        let avatar = message.author.displayAvatarURL({ format: 'png' });
         let image = await yuricanvas.delete(avatar);
-        let attachment = new Discord.MessageAttachment(image, "deleted.png");
-        return message.channel.send(attachment);
+        let attachment = new MessageAttachment(image, "deleted.png");
+        return message.channel.send({ files: [attachment] });
     }
     if (message.content === "!rank") {
         let rank = getRankSomehow();
@@ -82,8 +82,8 @@ client.on("message", async (message) => {
             color: "white", 
             background: "https://link-to/superDuperBackground"
         });
-        let attachment = new Discord.MessageAttachment(image, "rank.png");
-        return message.channel.send(attachment);
+        let attachment = new MessageAttachment(image, "rank.png");
+        return message.channel.send({ files: [attachment] });
     }
 });
 
