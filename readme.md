@@ -94,8 +94,7 @@ client.login("Your_Bot_Token_here");
 # Documentation
 **[https://canvacord.snowflakedev.xyz](https://canvacord.snowflakedev.xyz)**
 
-# Preview
-![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/screenshot.png)
+# Previews:
 
 # Change My Mind
 ![img](https://raw.githubusercontent.com/yuri-project-ml/yuri-canvas/master/test/changemymind.png)
